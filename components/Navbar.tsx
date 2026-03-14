@@ -42,18 +42,22 @@ export default function Navbar() {
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
-          <a href={sectionHref('/#inicio')} className="focus-ring-inverse flex items-center rounded-md">
+          <a
+            href={sectionHref('/#inicio')}
+            className="focus-ring-inverse inline-flex items-center gap-2 rounded-md"
+            aria-label="Ir al inicio de Panama JUG"
+          >
             <Image
               src="/jugpanlogo.png"
               alt="Logo JUG Panama"
-              width={28}
-              height={28}
-              className="mr-2 h-7 w-7 object-contain"
+              width={32}
+              height={32}
+              className="h-8 w-8 object-contain"
               priority
             />
-            <span className="text-lg sm:text-xl font-bold tracking-tight">
-              <span className="text-white">JUG</span>
-              <span className="text-[#F89820]">Panama</span>
+            <span aria-hidden="true" className="h-4 w-px bg-white/30" />
+            <span className="text-lg sm:text-xl font-bold leading-none tracking-tight text-white">
+              Panama <span className="text-[#F89820]">JUG</span>
             </span>
           </a>
 

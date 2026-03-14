@@ -29,9 +29,8 @@ export default function Footer({ nextEvent = null }: { nextEvent?: Event | null 
           {/* Brand Column */}
           <div>
             <a href={sectionHref('/#inicio')} className="focus-ring-inverse mb-4 flex items-center rounded-md">
-              <span className="text-xl font-bold">
-                <span className="text-white">JUG</span>
-                <span className="text-[#F89820]">Panama</span>
+              <span className="text-xl font-bold tracking-tight text-white">
+                Panama<span className="text-[#F89820]">JUG</span>
               </span>
             </a>
             <p className="text-[#CED4DA] text-sm mb-6">

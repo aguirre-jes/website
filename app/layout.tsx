@@ -18,7 +18,7 @@ const ibmPlexMono = IBM_Plex_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'JUG Panama | Comunidad Java en Panamá',
+  title: 'Panama JUG',
   description: 'La comunidad Java y JVM más activa de Panamá. Eventos, talleres y networking para desarrolladores.',
   icons: {
     icon: [{ url: '/jugpanlogo.png', type: 'image/png' }],
