@@ -42,9 +42,6 @@ export default function About() {
             ref={leftRef}
             className={`transition-all duration-700 ease-out ${leftInView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}
           >
-            <p className="mb-4 font-mono text-sm text-[#F89820]">
-              {'// Quiénes somos'}
-            </p>
             <h2 id="about-title" className="mb-5 max-w-[16ch] text-3xl font-bold text-[#212529] text-balance md:text-4xl">
               Una comunidad construida por y para desarrolladores
             </h2>
