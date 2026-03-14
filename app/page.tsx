@@ -16,14 +16,13 @@ import {
 export default function Home() {
   const upcomingEvents = getUpcomingEventsFromMarkdown()
   const pastEvents = getPastEventsFromMarkdown()
-  const pastEventsPreview = pastEvents.slice(0, 6)
+  const pastEventsPreview = pastEvents.slice(0, 0)
   const nextEvent = getNextEventWithEmbedFromMarkdown()
   const sponsors = getSponsorsFromMarkdown()
-  const communityStartYear = 2021
   const heroStats = {
-    completedEvents: pastEvents.length,
-    upcomingEvents: upcomingEvents.length,
-    years: new Date().getFullYear() - communityStartYear,
+    completedEvents: 1,
+    upcomingEvents: 1,
+    years: 1,
   }
   const nextEventPrimaryHref = nextEvent?.streamOpen
     ? '/#transmision'
