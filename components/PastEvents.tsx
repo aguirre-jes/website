@@ -45,8 +45,23 @@ export default function PastEvents({
           )}
         </div>
 
+        {pastEvents.length === 0 && (
+          <div className="rounded-2xl border border-dashed border-[#CED4DA] bg-white p-8 text-center">
+            <h3 className="text-xl font-bold text-[#212529] mb-2">Aún no tenemos eventos pasados</h3>
+            <p className="mx-auto max-w-2xl text-sm text-[#6C757D] mb-6">
+              Cuando terminemos nuestro primer meetup, lo publicaremos aquí con su resumen y grabación.
+            </p>
+            <Link
+              href="/eventos/proximos"
+              className="focus-ring inline-flex items-center rounded-md bg-[#F89820] px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#DD7A0A]"
+            >
+              Ver agenda actual
+            </Link>
+          </div>
+        )}
+
         {/* Events Grid - Horizontal scroll on mobile */}
-        <div ref={cardsRef} className="flex md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 overflow-x-auto pb-4 md:pb-0 -mx-4 px-4 md:mx-0 md:px-0 snap-x snap-mandatory md:snap-none">
+        <div ref={cardsRef} className={`flex md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 overflow-x-auto pb-4 md:pb-0 -mx-4 px-4 md:mx-0 md:px-0 snap-x snap-mandatory md:snap-none ${pastEvents.length === 0 ? 'hidden' : ''}`}>
           {pastEvents.map((event, i) => (
             <article
               key={event.id}

@@ -2,6 +2,7 @@
 id: "past-002"
 slug: "java21-virtual-threads"
 status: "past"
+published: false
 title: "Java 21: Virtual Threads en accion"
 description: "Exploramos las nuevas caracteristicas de Java 21, enfocandonos en Virtual Threads y Project Loom."
 date: "2026-01-15T19:00:00Z"

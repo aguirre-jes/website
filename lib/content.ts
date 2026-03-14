@@ -7,6 +7,7 @@ import type { Event, Sponsor } from '@/lib/data'
 const eventSchema = z.object({
   id: z.string(),
   slug: z.string().optional(),
+  published: z.boolean().optional().default(true),
   title: z.string(),
   description: z.string(),
   date: z.string(),
@@ -84,6 +85,7 @@ export function getAllEventsFromMarkdown(): Event[] {
   return files
     .map((filePath) => parseMarkdownFrontmatter(filePath, eventSchema))
     .filter((event): event is Event => event !== null)
+    .filter((event) => event.published !== false)
     .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
 }
 
@@ -91,6 +93,7 @@ export function getUpcomingEventsFromMarkdown(): Event[] {
   return listMarkdownFiles(EVENTS_UPCOMING_DIR)
     .map((filePath) => parseMarkdownFrontmatter(filePath, eventSchema))
     .filter((event): event is Event => event !== null)
+    .filter((event) => event.published !== false)
     .filter((event) => event.status === 'upcoming')
     .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
 }
@@ -99,6 +102,7 @@ export function getPastEventsFromMarkdown(): Event[] {
   return listMarkdownFiles(EVENTS_PAST_DIR)
     .map((filePath) => parseMarkdownFrontmatter(filePath, eventSchema))
     .filter((event): event is Event => event !== null)
+    .filter((event) => event.published !== false)
     .filter((event) => event.status === 'past')
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
 }

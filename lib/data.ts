@@ -29,6 +29,7 @@ export interface Event {
   youtubeEmbedUrl?: string
   youtubeUrl?: string    // post-event recording
   thumbnailUrl?: string
+  published?: boolean // visibility toggle for markdown-driven events
 }
 
 export interface Sponsor {

@@ -2,6 +2,7 @@
 id: "past-004"
 slug: "introduccion-jakarta-ee-10"
 status: "past"
+published: false
 title: "Introduccion a Jakarta EE 10"
 description: "Una introduccion completa a Jakarta EE 10 y su ecosistema para desarrollo empresarial."
 date: "2025-11-25T19:00:00Z"
