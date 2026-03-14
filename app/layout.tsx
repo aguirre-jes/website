@@ -20,23 +20,10 @@ const ibmPlexMono = IBM_Plex_Mono({
 export const metadata: Metadata = {
   title: 'JUG Panama | Comunidad Java en Panamá',
   description: 'La comunidad Java y JVM más activa de Panamá. Eventos, talleres y networking para desarrolladores.',
-  generator: 'v0.app',
   icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
+    icon: [{ url: '/jugpanlogo.png', type: 'image/png' }],
+    shortcut: '/jugpanlogo.png',
+    apple: '/jugpanlogo.png',
   },
 }
 

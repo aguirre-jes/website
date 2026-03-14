@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { navLinks } from '@/lib/data'
 import { Menu, X } from 'lucide-react'
@@ -42,6 +43,14 @@ export default function Navbar() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <a href={sectionHref('/#inicio')} className="focus-ring-inverse flex items-center rounded-md">
+            <Image
+              src="/jugpanlogo.png"
+              alt="Logo JUG Panama"
+              width={28}
+              height={28}
+              className="mr-2 h-7 w-7 object-contain"
+              priority
+            />
             <span className="text-lg sm:text-xl font-bold tracking-tight">
               <span className="text-white">JUG</span>
               <span className="text-[#F89820]">Panama</span>
