@@ -6,10 +6,10 @@ import type { Event } from '@/lib/data'
 import { Github, Linkedin, Youtube, Twitter } from 'lucide-react'
 
 const socialLinks = [
-  { icon: Github, href: 'https://github.com/jugpanama', label: 'GitHub' },
-  { icon: Linkedin, href: 'https://linkedin.com/company/jugpanama', label: 'LinkedIn' },
-  { icon: Youtube, href: 'https://youtube.com/@jugpanama', label: 'YouTube' },
-  { icon: Twitter, href: 'https://twitter.com/jugpanama', label: 'Twitter' },
+  { icon: Github, href: 'https://github.com/jugpanama', label: 'GitHub', target: '_blank', rel: 'noopener noreferrer' },
+  { icon: Linkedin, href: 'https://linkedin.com/company/jugpanama', label: 'LinkedIn', target: '_blank', rel: 'noopener noreferrer' },
+  { icon: Youtube, href: 'https://youtube.com/@jugpanama', label: 'YouTube', target: '_blank', rel: 'noopener noreferrer' },
+  { icon: Twitter, href: 'https://twitter.com/panamajug', label: 'Twitter', target: '_blank', rel: 'noopener noreferrer' },
 ]
 
 export default function Footer({ nextEvent = null }: { nextEvent?: Event | null }) {
@@ -42,8 +42,8 @@ export default function Footer({ nextEvent = null }: { nextEvent?: Event | null 
                 <a
                   key={social.label}
                   href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  target={social.target}
+                  rel={social.rel}
                   className="focus-ring-inverse tap-target inline-flex items-center justify-center rounded-md text-white transition-colors hover:text-[#F89820]"
                   aria-label={social.label}
                 >
