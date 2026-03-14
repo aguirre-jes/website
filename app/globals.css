@@ -213,6 +213,19 @@
   box-shadow: 0 20px 40px -8px rgba(0, 0, 0, 0.18), 0 8px 16px -4px rgba(0, 0, 0, 0.08);
 }
 
+/* Navbar default blend with hero */
+.navbar-blend {
+  background: linear-gradient(
+    180deg,
+    rgba(34, 56, 90, 0.9) 0%,
+    rgba(34, 56, 90, 0.72) 62%,
+    rgba(34, 56, 90, 0.08) 100%
+  );
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  box-shadow: none;
+  backdrop-filter: saturate(135%) blur(6px);
+}
+
 /* Navbar scroll — glass edge */
 .navbar-scrolled {
   background-color: rgba(34, 56, 90, 0.97);

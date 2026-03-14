@@ -16,7 +16,7 @@ import {
 export default function Home() {
   const upcomingEvents = getUpcomingEventsFromMarkdown()
   const pastEvents = getPastEventsFromMarkdown()
-  const pastEventsPreview = pastEvents.slice(0, 0)
+  const pastEventsPreview = pastEvents.slice(0, 3)
   const nextEvent = getNextEventWithEmbedFromMarkdown()
   const sponsors = getSponsorsFromMarkdown()
   const heroStats = {
@@ -44,7 +44,10 @@ export default function Home() {
           primaryCtaHref={nextEventPrimaryHref}
           primaryCtaLabel={nextEventPrimaryLabel}
         />
-        <About />
+        {/* Spacer compensates for the floating stats card that translates out of Hero */}
+        <div className="pt-14 sm:pt-16 md:pt-20">
+          <About />
+        </div>
         <UpcomingEvents upcomingEvents={upcomingEvents} />
         <PastEvents pastEvents={pastEventsPreview} totalCount={pastEvents.length} />
         <EventsEmbed nextEvent={nextEvent} />

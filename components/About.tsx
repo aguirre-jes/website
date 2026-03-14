@@ -1,6 +1,7 @@
 'use client'
 
 import { Zap, GraduationCap, Globe, Users } from 'lucide-react'
+import Link from 'next/link'
 import { useInView } from '@/hooks/use-in-view'
 
 const features = [
@@ -63,6 +64,12 @@ export default function About() {
                 </span>
               ))}
             </div>
+            <Link
+              href="/sobre-jug-panama"
+              className="focus-ring mt-6 inline-flex items-center rounded-md font-medium text-[#2F4F7A] hover:text-[#22385A]"
+            >
+              Conoce más <span aria-hidden="true" className="ml-1">→</span>
+            </Link>
           </div>
 
           {/* Right Column - Feature Cards */}

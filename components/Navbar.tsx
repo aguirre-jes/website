@@ -35,8 +35,8 @@ export default function Navbar() {
   return (
     <nav
       aria-label="Navegación principal"
-      className={`fixed top-0 left-0 right-0 z-50 bg-[#2F4F7A] transition-shadow duration-300 ${
-        isScrolled ? 'navbar-scrolled' : ''
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled ? 'navbar-scrolled' : 'navbar-blend'
       }`}
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -78,24 +78,32 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div
-          id="mobile-navigation"
-          className="fixed inset-x-0 bottom-0 top-16 z-40 border-t border-white/10 bg-[#22385A] md:hidden"
-        >
-          <ul className="flex h-full flex-col px-4 py-4 pb-6" role="list">
-            {navLinks.map((link) => (
-              <li key={link.href}>
-                <a
-                  href={sectionHref(link.href)}
-                  className="focus-ring-inverse tap-target block rounded-md py-2 text-base font-semibold text-white/80 transition-colors hover:text-white"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {link.label}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
+        <>
+          <button
+            type="button"
+            aria-label="Cerrar menú"
+            className="fixed inset-0 top-16 z-30 bg-[#0D1A2D]/72 backdrop-blur-[2px] md:hidden"
+            onClick={() => setIsMobileMenuOpen(false)}
+          />
+          <div
+            id="mobile-navigation"
+            className="fixed inset-x-4 top-20 z-40 rounded-2xl border border-white/12 bg-[#22385A]/98 p-3 shadow-[0_18px_40px_-14px_rgba(0,0,0,0.7)] md:hidden"
+          >
+            <ul className="flex flex-col gap-1" role="list">
+              {navLinks.map((link) => (
+                <li key={link.href}>
+                  <a
+                    href={sectionHref(link.href)}
+                    className="focus-ring-inverse tap-target block rounded-lg px-3 py-2.5 text-base font-semibold text-white/85 transition-colors hover:bg-white/6 hover:text-white"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </>
       )}
     </nav>
   )

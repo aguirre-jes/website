@@ -15,7 +15,7 @@ export default function PastEvents({
   const [headerRef, headerInView] = useInView()
   const [cardsRef, cardsInView] = useInView()
   const resolvedTotal = totalCount ?? pastEvents.length
-  const shouldShowAllLink = resolvedTotal > pastEvents.length
+  const shouldShowAllLink = resolvedTotal > 0
 
   return (
     <section aria-labelledby="past-events-title" className="py-16 md:py-24 bg-[#F8F9FA]">
@@ -40,7 +40,7 @@ export default function PastEvents({
               href="/eventos/pasados"
               className="focus-ring inline-flex items-center rounded-md font-medium text-[#2F4F7A] hover:text-[#22385A]"
             >
-              Ver todos ({resolvedTotal}) <ArrowRight className="ml-1 h-4 w-4" />
+              Ver todos <ArrowRight className="ml-1 h-4 w-4" />
             </Link>
           )}
         </div>
