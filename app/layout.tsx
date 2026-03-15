@@ -20,7 +20,7 @@ const ibmPlexMono = IBM_Plex_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL('https://panamajug.org'),
   title: 'Panama JUG',
-  description: 'La comunidad Java y JVM más activa de Panamá. Eventos, talleres y networking para desarrolladores.',
+  description: 'Panama JUG es la comunidad Java y JVM de Panamá: meetups, talleres, charlas técnicas y networking para desarrolladores y equipos de ingeniería.',
   alternates: {
     canonical: '/',
   },
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     url: 'https://panamajug.org',
     siteName: 'Panama JUG',
     title: 'Panama JUG',
-    description: 'La comunidad Java y JVM más activa de Panamá. Eventos, talleres y networking para desarrolladores.',
+    description: 'Panama JUG es la comunidad Java y JVM de Panamá: meetups, talleres, charlas técnicas y networking para desarrolladores y equipos de ingeniería.',
     images: [
       {
         url: 'https://panamajug.org/portada-web-social.png',
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Panama JUG',
-    description: 'La comunidad Java y JVM más activa de Panamá. Eventos, talleres y networking para desarrolladores.',
+    description: 'Panama JUG es la comunidad Java y JVM de Panamá: meetups, talleres, charlas técnicas y networking para desarrolladores y equipos de ingeniería.',
     images: ['https://panamajug.org/portada-web-social.png'],
   },
   icons: {
